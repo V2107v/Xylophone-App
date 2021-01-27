@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-//import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   void playSound(int num) {
+    AudioCache player = AudioCache();
+    player.play('note$num.wav');
     print(num);
   }
 
